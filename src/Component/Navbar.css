@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: darkgray;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background:rgb(0,48,126);
+    padding: 15px 0px;
+    position: sticky;
+    top: 0;
+}
+
+.brand{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+
+}
+
+.nav__list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem
+}
+
+.nav_toggler div{
+width: 2.5rem;
+height: 0.2rem;
+background: darkgray;
+margin: 0.4rem;
+
+}
+
+.nav_toggler {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .nav_toggler {
+        display: block;
+    }
+
+    .nav__list {
+        position: fixed;
+        top: 7vh;
+        right: 0;
+        width: 50%;
+        height: 93vh;
+        background:rgb(0,48,126);
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+    }
+
+    .nav_item{
+        gap: 2px;
+    }
+
+    .nav_active {
+        transform: translateX(0);
+    }
+    .toggler .line1 {
+        transform: rotate(-45deg) translate(-4px, 5px);
+    }
+
+    .toggler .line2 {
+        opacity: 0;
+    }
+
+    .toggler .line3 {
+        transform: rotate(45deg) translate(-4px, -5px);
+    }
+
+}
