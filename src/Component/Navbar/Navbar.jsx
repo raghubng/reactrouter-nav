@@ -19,9 +19,9 @@ const Navbar = () => {
         <a className="brand" href="#">Logo</a>
         <ul className={Active}>
             <li className="nav__item"><NavLink to='/'>Home</NavLink></li>
-            <li className="nav__item"><NavLink to='/About'>about</NavLink></li>
-            <li className="nav__item"><NavLink to='/service'>Service</NavLink></li>
-            <li className="nav__item"><NavLink to='/contact'>Contact</NavLink></li>
+            <li className="nav__item"><NavLink to='reactrouter-nav/About'>about</NavLink></li>
+            <li className="nav__item"><NavLink to='reactrouter-nav/service'>Service</NavLink></li>
+            <li className="nav__item"><NavLink to='reactrouter-nav//contact'>Contact</NavLink></li>
         </ul>
         <div onClick={navToggle} className={toggleIcon}>
             <div className="toggler line1"></div>
@@ -31,9 +31,9 @@ const Navbar = () => {
     </nav>
     <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/service' element={<Service/>}/>
-        <Route path='/contact' element={<Contact/>}/>
+        <Route path='reactrouter-nav/about' element={<About/>}/>
+        <Route path='reactrouter-nav/service' element={<Service/>}/>
+        <Route path='reactrouter-nav/contact' element={<Contact/>}/>
     </Routes>
     </Router>
   );
